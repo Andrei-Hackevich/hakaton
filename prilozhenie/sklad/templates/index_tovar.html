@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Товары</title>
+</head>
+<body>
+    <div>
+        {% for tovar in tovars %}
+            <h2>{{ tovar.title }}</h2>
+            <p>{{ tovar.description }}</p>
+            <p>{{ tovar.price }}</p>
+            <p>{{ tovar.amount }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

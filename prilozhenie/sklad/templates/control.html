@@ -1,0 +1,98 @@
+<html>
+<head>
+ <title>Склад</title>
+ <meta charset="utf-8">
+ <style>
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    background-color: #111;
+  }
+  body {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+  }
+  .container {
+   max-width: 800px;
+   margin: 0 auto;
+   text-align: center;
+   padding: 50px;
+  }
+  select {
+   padding: 10px;
+   border-radius: 5px;
+   border: none;
+   background-color: #f9f9f9;
+   margin-bottom: 20px;
+   width: 100%;
+   font-size: 16px;
+  }
+  option {
+   padding: 10px;
+   font-size: 16px;
+  }
+
+
+
+ </style>
+</head>
+<body>
+ <div class="header">
+  <h1>Контроль товаров на складе</h1>
+ </div>
+ <ul>>
+  <li><a href="#">Компания Х</a></li>
+  <li><a href="#"></a></li>
+  <li style="float:right"><a href="#">Выход</a></li>
+ </ul>
+<h1>Список товаров </h1>
+<h2>На складе</h2><br>
+ {% if el in tovar %}
+  {% for el in tovar %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.title}}</h3>
+            <p>{{ el.description}}</p>
+            <p>{{ el.price}}</p>
+            <p>{{ el.amount}}</p>
+            <p>{{ el.status}}</p>
+            <p>{{ el.published}}</p>
+        </div>
+    {% endfor %}
+    {% endif %}
+ <br>
+ <h2>Товар к отгрузке</h2><br>
+{% if order%}
+    {% for el in order %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.tovar}}</h3>
+            <p>{{ el.client}}</p>
+            <p>{{ el.amount}}</p>
+            <p>{{ el.status}}</p>
+            <p>{{ el.published}}</p>
+        </div>
+    {% endfor %}
+    {% else%}
+    <p>Весь товар уже отгружен</p>
+    {% endif %}
+
+
+</html>

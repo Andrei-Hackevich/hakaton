@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Страница с рамкой</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .center-box {
+      display: flex;
+      justify-content: center; /* выравнивание по горизонтали */
+      align-items: center; /* выравнивание по вертикали */
+      height: 300px; /* задаем высоту элементу */
+      border: 2px solid #333; /* задаем рамку */
+      border-radius: 10px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .center-box a {
+      display: block;
+      margin: 20px;
+      text-align: center;
+      font-size: 24px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .center-box a:hover {
+      color: #fff;
+      background-color: #333;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="center-box">
+    <a href="/priem">Прием товара</a>
+    <a href="/add_client">Добавление клиента</a>
+    <a href="/oformzak">Оформление заказа</a>
+    <a href="/otgruzka">Отгрузка товара</a>
+    <a href="#">Контроль</a>
+    <a href="#" class="logout-button">Выход</a>
+  </div>
+</body>
+
+</html>

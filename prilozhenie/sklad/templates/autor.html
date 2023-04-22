@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Авторизация</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        margin: 50px auto;
+        max-width: 500px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      input[type="text"], input[type="password"] {
+        height: 40px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+
+      input[type="submit"] {
+        background-color: #008CBA;
+        border: 1px solid black;
+        border-radius: 4px;
+        color: #fff;
+        cursor: pointer;
+        font-size: 16px;
+        height: 40px;
+        transition: background-color 0.3s ease;
+        width: 100%;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #0077A3;
+      }
+
+      .message {
+        color: red;
+        margin-top: 20px;
+      }
+      .vxod {
+
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Компания Х</h1>
+    <div class="container">
+      <h2>Авторизация</h2>
+      <form  method="post" action="auth2.html">
+        <label for="username">Логин</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Пароль</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <input class="vxod" type="submit" value="Войти">
+      </form>
+      <div class="message"></div>
+    </div>
+  </body>
+</html>
